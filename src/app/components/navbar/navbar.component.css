@@ -1,0 +1,9 @@
+nav div li a.active{
+    color: blue;
+
+}
+
+nav div li a:hover{
+    color: rgba(0, 0, 255, 0.192);
+
+}

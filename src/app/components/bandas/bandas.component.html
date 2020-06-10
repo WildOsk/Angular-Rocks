@@ -1,7 +1,7 @@
 <div class="container">
   <div class ="row card-group">
     <div class="col-sm-12 col-md-12">
-      <div class="card w-50 mt-5 mx-auto"  *ngFor="let banda of bandas">
+      <div class="card w-50 mt-5 mx-auto mb-5"  *ngFor="let banda of bandas">
         <img src="{{banda.foto}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{banda.nombre}}</h5>
@@ -12,9 +12,17 @@
             <!--<iframe width="560" height="315" [src]="banda.video | youtube:'https://www.youtube.com/embed/'" frameborder="0" allow="autoplay"></iframe>!-->
      
         </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Más información</a>
-          <a href="#" class="card-link">Eliminar banda</a>
+        <div class="card-body ">
+          <div class="container mx-auto">
+            <div class="row">
+              <div class="col-md-4">
+                <button class="btn btn-outline-warning my-2 my-sm-0 " type="submit">Más info</button>
+              </div>
+              <div class="col-md-4">
+                <button class="btn btn-outline-danger my-2 my-sm-0" (click)="deleteBanda(banda.id)" type="submit">Eliminar</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Banda } from '../models/banda.model';
+import { RouterModule, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class BandaServiceService {
+
   bandasCargadas: Array<Banda> = [{
     id:0,nombre:"The Rolling Stones",
     origen:"Inglaterra",
@@ -118,12 +120,32 @@ export class BandaServiceService {
   ];
   
  
-  bandas: Array<Banda> = [];
-  constructor() {
+ 
+  constructor(private route:Router) {
     this.bandas=[...this.bandasCargadas];
+    
   }
+  bandas: Array<Banda> = [];
 
   getBandas():Array<Banda>{
     return this.bandas;
   }
+ 
+
+  addBanda(banda:Banda){
+    this.bandas.push(banda);
+  }
+
+  deleteBanda(id:number){
+    for(var i= 0; i< this.bandas.length;i++){
+      if(this.bandas[i]["id"]==id){
+        this.bandas.splice(i,1);
+
+      }
+
+    }
+    
+  }
+
 }
+

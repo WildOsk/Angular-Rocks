@@ -1,1 +1,11 @@
-
+.content{
+	height: auto;
+	width: 75%;
+	margin: 0px auto;
+	box-shadow: 0px 0px 40px black;
+	border-left:1px solid #b7b7b7;
+	border-right:1px solid #b7b7b7;
+	background: rgba(255, 255, 255, 0.7);
+    margin-bottom: 50px;
+    margin-top: 5%;
+}

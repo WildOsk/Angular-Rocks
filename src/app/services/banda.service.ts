@@ -139,6 +139,7 @@ export class BandaServiceService {
   deleteBanda(id:number){
     for(var i= 0; i< this.bandas.length;i++){
       if(this.bandas[i]["id"]==id){
+        
         this.bandas.splice(i,1);
 
       }

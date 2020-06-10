@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Banda} from '../../models/banda.model'
+import { BandaServiceService } from '../../services/banda.service';
 
 @Component({
   selector: 'app-bandas',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BandasComponent implements OnInit {
 
-  constructor() { }
+  bandas:Array<Banda>=[];
+
+  constructor(private bandasService:BandaServiceService) { }
 
   ngOnInit(): void {
+    this.bandas = this.bandasService.getBandas();
   }
 
 }

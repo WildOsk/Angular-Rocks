@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { VideoPipe } from './pipes/video/video.pipe';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BandasComponent } from './components/bandas/bandas.component';
+import { BandasInfoComponent } from './components/bandas-info/bandas-info.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { BandasComponent } from './components/bandas/bandas.component';
     AppComponent,
     VideoPipe,
     NavbarComponent,
-    BandasComponent
+    BandasComponent,
+    BandasInfoComponent
     
   ],
   imports: [

@@ -22,5 +22,9 @@ export class BandasComponent implements OnInit {
     console.log(id);
     this.bandasService.deleteBanda(id);
   }
+  onSelect(bandas){
+    this.router.navigate(['/bandasInfo',bandas.id]);
+
+  }
 
 }

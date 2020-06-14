@@ -16,10 +16,10 @@ export class BandaServiceService {
     ​ "Brian Jones fue despedido en junio de 1969, falleciendo tres semanas después, siendo reemplazado por el guitarrista Mick Taylor, que dejaría el grupo en 1975"+
       " y sería a su vez reemplazado por Ronnie Wood. Con el retiro de Bill Wyman en 1993 se incluyó al bajista Darryl Jones que, aunque toca con la banda desde la"+ 
     " grabación del álbum Voodoo Lounge en 1994, no es un miembro oficial.",
-    miembros:"asda",
-    actividad:"pru8eba",
+    miembros:"Mick Jagger, Keith Richards, Charlie Watts, Ronnie Wood",
+    actividad:"1962-presente",
     foto:"https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/The_Rolling_Stones_Summerfest_in_Milwaukee_-_2015.jpg/250px-The_Rolling_Stones_Summerfest_in_Milwaukee_-_2015.jpg",
-    video:"123"
+    video:"LNNPNweSbp8"
   },{
     id:1,nombre:"Led Zeppelin",
     origen:"Londres, Reino Unido",
@@ -130,6 +130,9 @@ export class BandaServiceService {
   getBandas():Array<Banda>{
     return this.bandas;
   }
+  getBandaById(id){
+    return this.bandas.find(banda => banda.id === id);
+  }
  
 
   addBanda(banda:Banda){
@@ -139,14 +142,9 @@ export class BandaServiceService {
   deleteBanda(id:number){
     for(var i= 0; i< this.bandas.length;i++){
       if(this.bandas[i]["id"]==id){
-        
         this.bandas.splice(i,1);
-
       }
-
     }
-    
   }
-
 }
 

@@ -13,8 +13,8 @@
 
 
 <div class="col-md-4 text-center mx-auto m-5">
-  <button class="btn btn-outline-secondary mx-5 my-2 my-sm-0" (click)="goPrevious()"type="submit" *ngIf="banda.id!=0">Banda anterior</button>
-  <button class="btn btn-outline-info mx-5 my-2 my-sm-5" (click)="goNext()" type="submit" >Siguiente banda</button>
+  <button class="btn btn-outline-secondary mx-5 my-2 my-sm-5" (click)="goPrevious()"type="submit" *ngIf="banda.id!=0">Banda anterior</button>
+  <button class="btn btn-outline-info mx-5 my-2 my-sm-5" (click)="goNext()" type="submit" *ngIf="lastId.id!=banda.id" >Siguiente banda</button>
 </div>
 
 

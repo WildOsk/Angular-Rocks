@@ -1,0 +1,52 @@
+
+<div>
+<h1 class="text-center text-uppercase mb-3" style="background-color: black; color: white; margin: 0;">agregar nueva banda</h1>
+    <div class="col-sm-12 col-lg-12">
+        <form [formGroup]="form" (ngSubmit)="save()">
+      
+            <div class ="form-group">
+                <label for="nombre">Nombre</label>
+                <input class ="form-control" formControlName="nombre" type="text" name="nombre" >
+            </div>
+            <div class ="form-group">
+                <label for="origen">Origen</label>
+                <input class ="form-control" formControlName="origen" type="text" name="origen" >
+            </div>
+        
+            <div class ="form-group">
+                <label for="historia">Historia</label>
+                <textarea class ="form-control" formControlName="historia" type="text" name="historia" ></textarea>
+            </div>
+        
+            <div class ="form-group">
+                <label for="miembros">Miembros</label>
+                <input class ="form-control" formControlName="miembros" type="text" name="miembros">
+            </div>
+        
+            <div class ="form-group">
+                <label for="actividad">Actividad</label>
+                <input class ="form-control" formControlName="actividad" type="text" name="actividad" >
+            </div>
+        
+            <div class ="form-group">
+                <label for="foto">Foto</label>
+                <input class ="form-control" formControlName="foto" type="text" name="foto" placeholder="Puedes poner el link de una imagen; Ejemplo: https://i2.wp.com/www.marcelopedra.com.ar/blog/wp-content/uploads/2014/04/windows_xp_bliss-wide.jpg?ssl=1" >
+            </div>
+        
+            <div class ="form-group">
+                <label for="video">Video</label>
+                <input [class.is-invalid]="form.get('video').invalid && form.get('video').touched" class ="form-control" formControlName="video" placeholder="v2AC41dglnM" type="text" name="video" data-toggle="tooltip" data-placement="bottom" title="https://www.youtube.com/watch?v=v2AC41dglnM">
+                <div *ngIf="form.get('video').invalid && form.get('video').touched">
+                    <small class="text-danger" *ngIf="form.get('video').errors?.required">No puede quedar vacio</small>
+                    <small class="text-danger" *ngIf="form.get('video').errors?.minlength">Minimo 11 caracteres</small>
+                </div>
+            </div>
+            <div class="mb-5 mt-5">
+                <button type="submit" class="btn btn-outline-primary btn-block ">Guardar Banda</button>
+            </div>
+           
+        </form>
+    </div>
+    
+</div>
+

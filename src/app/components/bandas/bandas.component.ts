@@ -9,7 +9,7 @@ import { BandaServiceService } from '../../services/banda.service';
   styleUrls: ['./bandas.component.css']
 })
 export class BandasComponent implements OnInit {
-
+  banda: any;
   bandas:Array<Banda>=[];
 
   constructor(private bandasService:BandaServiceService, private router:Router) { }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Banda } from '../models/banda.model';
-import { RouterModule, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
